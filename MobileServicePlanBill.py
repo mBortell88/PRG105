@@ -5,7 +5,7 @@
 # Variables
 package_plan = input('Which package are you subscribed to: Package A, Package B or Package C? ')
 
-if package_plan == str('Package A'):
+if package_plan == "Package A":
     max_minutes_per_month = 450
     std_month_bill = 39.99
     over_max_min_fee = 0.45
@@ -15,7 +15,7 @@ if package_plan == str('Package A'):
     elif mins_used > max_minutes_per_month:
         bill_for_month = std_month_bill + ((mins_used - max_minutes_per_month) * over_max_min_fee)
         print('$', format(bill_for_month, ',.2f'))
-elif package_plan == str('Package B'):
+elif package_plan == "Package B":
     max_minutes_per_month = 900
     std_month_bill = 59.99
     over_max_min_fee = 0.40
@@ -25,7 +25,7 @@ elif package_plan == str('Package B'):
     elif mins_used > max_minutes_per_month:
         bill_for_month = ((mins_used - max_minutes_per_month) * over_max_min_fee) + std_month_bill
         print('$', format(bill_for_month, ',.2f'))
-elif package_plan == str('Package C'):
+elif package_plan == "Package C":
     max_minutes_per_month = 'unlimited'
     std_month_bill = 69.99
     over_max_min_fee = 0.00
