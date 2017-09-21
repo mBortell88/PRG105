@@ -7,13 +7,13 @@
 
 # variables
 num_years = int(input('How many years? '))
+# initialize accumulator
+total = 0.00
 for year in range(num_years):
     print('Year number ', year + 1)
-    # initialize accumulator
-    total = 0.00
     # Get inches of rain per month
     for month in range(1, 13):
         print('Month number', month)
         inches_rainfall = float(input('How many inches of rain for the month? '))
-        total += inches_rainfall
-    print('The average rainfall for the year', year + 1, 'is ', format(total/12, ',.2f'), 'inches.')
+        total += inches_rainfall/12
+print('The average rainfall for ', num_years, ' years is ', format(total/num_years, ',.2f'), 'inches.')
