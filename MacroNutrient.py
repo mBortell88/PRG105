@@ -1,7 +1,14 @@
+# This is a program that calculates the total calories consumed in the day.
+# It also totals the calories from fat, carbs and protein
+
+
+# global variable, accumulator - totals the calories
 total = 0.00
 
 
 def total_calories():
+    # This function totals all calories from fat, carbs and protein
+    # Accesses additional functions
     print("This program calculates the total fat, carbs and protein consumed in a day.")
     fat()
     carb()
