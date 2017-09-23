@@ -23,7 +23,7 @@ def calc_average():
     test_average = tests_total / 5
     global total
     total += test_average
-    print(total)
+    print("Your average test score was: ", total)
     return total
 
 
@@ -39,7 +39,7 @@ def determine_grade(total):
         letter_grade = 'D'
     else:
         letter_grade = 'F'
-    print("Your grade is: ", letter_grade)
+    print("Your final grade is: ", letter_grade)
     return letter_grade
 
 
