@@ -1,30 +1,25 @@
 # This program requests 5 test scores from the User to calculate their grade
 
-# Initialize Accumulator
-total = 0.00
-# Request five test scores from user
-test_score1 = float(input('Please enter the score for the first test: '))
-test_score2 = float(input('Please enter the score for the second test: '))
-test_score3 = float(input('Please enter the score for the third test: '))
-test_score4 = float(input('Please enter the score for the fourth test: '))
-test_score5 = float(input('Please enter the score for the fifth test: '))
-scores = test_score1, test_score2, test_score3, test_score4, test_score5
 
-
-def grade():
+def main():
     # This function processes the calc_average and determine_grade functions
-    calc_average()
-    determine_grade(total)
+    # Request five test scores from user
+    test_score1 = float(input('Please enter the score for the first test: '))
+    test_score2 = float(input('Please enter the score for the second test: '))
+    test_score3 = float(input('Please enter the score for the third test: '))
+    test_score4 = float(input('Please enter the score for the fourth test: '))
+    test_score5 = float(input('Please enter the score for the fifth test: '))
+    # Initialize accumulator and call cal_average function
+    total_scores = calc_average(test_score1, test_score2, test_score3, test_score4, test_score5)
+    # Call the determine_grade function
+    determine_grade(total_scores)
 
 
-def calc_average():
+def calc_average(score1, score2, score3, score4, score5):
     # This function calculates the average
-    tests_total = sum(scores)
-    test_average = tests_total / 5
-    global total
-    total += test_average
-    print("Your average test score was: ", total)
-    return total
+    test_average = (score1 + score2 + score3 + score4 + score5) / 5
+    print("Your average test score was: ", test_average)
+    return test_average
 
 
 def determine_grade(total):
@@ -39,8 +34,8 @@ def determine_grade(total):
         letter_grade = 'D'
     else:
         letter_grade = 'F'
+
     print("Your final grade is: ", letter_grade)
-    return letter_grade
 
 
-grade()
+main()
