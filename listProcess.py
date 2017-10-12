@@ -22,14 +22,18 @@ def random_num():
 
 def user_num():
     # Asks user for a number between 1 and 100
-    try:
-        input_num = int(input('Choose a number between 1 and 100: '))  # used int to make string integer
-        if input_num in range(1, 101):
-            return input_num
+    input_num = 0
+    valid = 'false'
+    while valid != 'true':
+        try:
+            input_num = int(input('Choose a number between 1 and 100: '))  # used int to make string integer
+        except ValueError:
+            print('Data entered was not numeric.')
+        if 0 < input_num < 100:
+                    return input_num
+                    valid = 'true'
         else:
             print('Error! Number must be between 1 and 100.')
-    except ValueError:
-        print('Data entered was not numeric.')
 
 
 def greater_num(rand_num_list, users_num):
