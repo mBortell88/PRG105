@@ -1,3 +1,9 @@
+"""
+this gui program has the user click the show_info button
+the show info button will display my name and my school's
+street address, city, state and zip code.
+"""
+
 import tkinter
 
 
